@@ -1,0 +1,120 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.hidden{
+    display: none;
+}
+
+.wrapper{
+    position: relative;
+    width: 300px;
+    height: 250px;
+    overflow: hidden;
+}
+
+.bg1{
+    position: absolute;
+    width: 300px;
+    height: 250px;
+}
+
+.cap{
+    position: absolute;
+    width: 331px;
+    height: 87px;
+    top: 47px;
+    left: -17px;
+    z-index: 1;
+
+}
+
+.letter{
+    position: absolute;
+    width: 300px;
+    height: 250px;
+    left: 0;
+    transform: translateY(30%) scale(.7);
+    /* z-index: -3; */
+    /* transition: .5s; */
+    /* transform: translate(2px, 5px) scale(.7); */
+}
+
+.envelopeTop{
+    position: absolute;
+    width: 300px;
+    height: 250px;
+    top: 0;
+    left: 0;
+}
+
+.tapicon{
+    position: absolute;
+    cursor: pointer;
+    width: 39px;
+    height: 33px;
+    top: 204px;
+    left: 243px;
+}
+
+.pluse{
+    animation-name: pluse;
+    animation-duration: .7s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+}
+@keyframes pluse{
+    0%,100%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(.90);
+    }
+}
+
+.open{
+    animation: open 1s ease forwards;
+    z-index: -1;
+}
+
+@keyframes open{
+    to{
+        transform-origin: 0px 0px;
+        transform: rotateX(-170deg);
+        z-index: -1;
+        top: 81px;
+    }
+
+}
+
+.show{
+    animation: show 2s linear forwards;
+}
+
+@keyframes show{
+ 
+
+    50%{
+        transform: translateY(1%) scale(.7);
+        z-index: -auto;
+        
+    }
+    70%{
+        transform: translateY(1%) scale(.7);
+        z-index: -auto;
+    }
+    100%{
+        transform: translateY(0%) scale(1);
+    }
+  
+    }
+
+.bottom{
+        animation: bottom 1.8s ease;
+    }
+    @keyframes bottom{
+        to{
+            transform: translateY(300px) scale(0);
+        }
+    }
